@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title text-center>
+            <img src="assets/imgs/logo-full.png" height="43">
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+
+    <ion-card *ngFor="let cat of listCategory | async">
+        <a href="#" (click)="openListProduct(cat)">
+            <img [src]="cat.imagem" />
+            <div class="card-title">{{cat.cardTitle}}</div>
+            <div class="card-subtitle">{{cat.cardSubtitle}}</div>
+        </a>
+    </ion-card>
+
+</ion-content>

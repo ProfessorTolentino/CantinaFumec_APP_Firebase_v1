@@ -1,0 +1,7 @@
+{
+  "name": "CantinaFumec",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

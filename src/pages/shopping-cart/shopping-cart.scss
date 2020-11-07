@@ -1,0 +1,22 @@
+page-shopping-cart {
+    .price {
+        display: block;
+        font-size: 20px;
+        color: #488aff;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        width: 65%;
+        float: left;
+    }
+    .ion-icon-button {
+        font-size: 2.2em;
+    }
+    .scroll-content {
+        margin-bottom: 125px !important;
+        ;
+    }
+}

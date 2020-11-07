@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Contact
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+        <ion-list-header>Compras</ion-list-header>
+        <ion-item *ngFor="let order of orderList | async">
+            <ion-icon name="logo-usd"></ion-icon>
+            {{ order.value| currency: 'BRL': true:'1.2-2' }}
+            <br>
+            <ion-icon name="calendar"></ion-icon>
+            {{ order.date | date:'short' }}
+            <ion-item *ngFor="let item of order.items"> 
+                <ion-avatar item-start>
+                  <img [src]="item.menuItem.imagePath">
+                </ion-avatar>
+                <h2>{{item.menuItem.name}}</h2>
+                <p>{{item.quantity}}x 
+                    <ion-icon name="logo-usd"></ion-icon>
+                    {{ item.menuItem.price| currency: 'BRL': true:'1.2-2' }}
+                </p>
+              </ion-item>
+              <hr>
+        </ion-item>
+        
+    </ion-list>
+
+
+
+    <ion-list>
+        <ion-list-header>Usuário</ion-list-header>
+        <ion-item>
+            <ion-icon name="ionic" item-start></ion-icon>
+            {{auth.getEmail()}}
+        </ion-item>
+    </ion-list>
+    <button block="" (click)="logout()" color="primary" ion-button="" class="disable-hover button button-ios button-default button-default-ios button-block button-block-ios button-ios-primary"><span
+      class="button-inner">Logout</span>
+    <div class="button-effect"></div>
+  </button>
+</ion-content>

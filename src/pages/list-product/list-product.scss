@@ -1,0 +1,32 @@
+page-list-product {
+    .card {
+        margin: 5px;
+        width: calc(100% - 2%);
+    }
+    .price {
+        display: block;
+        font-size: 25px;
+        color: red;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        width: 85%;
+        float: left;
+    }
+    .cart {
+        display: block;
+        font-size: 25px;
+        color: blue;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        width: 15%;
+        float: right;
+    }
+}
